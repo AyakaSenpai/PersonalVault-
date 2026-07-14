@@ -3,32 +3,30 @@
 A time-locked personal savings vault on Ethereum where users can lock their ETH for a specific period.
 
 ## Features
-- Lock ETH until a predetermined unlock time
-- Only owner can withdraw after unlock time expires
-- Extend lock period (cannot shorten)
-- Emit events for all state changes
-- Custom errors for gas efficiency
+- **Time-Locked Security**: Users can lock their ETH until a predetermined unlock time.
+- **Access Control**: Only the owner can withdraw or extend the lock period.
+- **Gas Efficiency**: Implements Custom Errors for all validation checks to optimize gas usage.
+- **Event Logging**: Emits events for all critical state changes (Deposit, Withdrawal, Lock Extension).
 
 ## Contract Functions
 
 ### `deposit()`
-Add ETH to the vault. Any amount > 0 accepted.
+Adds ETH to the vault. Any amount > 0 is accepted. Only the owner can call this.
 
 ### `withdraw()`
-Retrieve all funds from vault. Only callable by owner after unlock time.
+Retrieves all funds from the vault. Only callable by the owner after the unlock time has passed.
 
-### `extendLock(1784029959 newUnlockTime)`
-Extend the lock period. New time must be greater than current unlock time.
+### `extendLock(uint256 newUnlockTime)`
+Extends the lock period. The `newUnlockTime` must be greater than the current unlock time.
 
 ### `getBalance()`
-Check current vault balance.
+Checks the current ETH balance of the vault.
+
+## Technical Specifications
+- **Solidity Version**: 0.8.24
+- **License**: MIT
 
 ## How to Deploy
-
-1. Compile with Solidity 0.8.34+commit.80d5c536
-2. Deploy with constructor parameter `_unlockTime` (1784029959)
-3. Done!
-
-## Example
-deploy contrad
-0x73366aF70d67815C8e7ee157F273351F8cE237D0
+1. **Compile**: Use Solidity compiler version `0.8.24`.
+2. **Deploy**: Deploy the contract with the `_unlockTime` (timestamp) as a constructor parameter.
+3. **Interact**: Once deployed, the owner can use the `deposit`, `withdraw`, and `extendLock` functions.
