@@ -30,3 +30,5 @@ Check current vault balance.
 3. Done!
 
 ## Example
+deploy contrad
+0x73366aF70d67815C8e7ee157F273351F8cE237D0
