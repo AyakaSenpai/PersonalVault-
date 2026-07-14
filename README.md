@@ -17,7 +17,7 @@ Add ETH to the vault. Any amount > 0 accepted.
 ### `withdraw()`
 Retrieve all funds from vault. Only callable by owner after unlock time.
 
-### `extendLock(uint256 newUnlockTime)`
+### `extendLock(1784029959 newUnlockTime)`
 Extend the lock period. New time must be greater than current unlock time.
 
 ### `getBalance()`
@@ -25,8 +25,8 @@ Check current vault balance.
 
 ## How to Deploy
 
-1. Compile with Solidity 0.8.0+
-2. Deploy with constructor parameter `_unlockTime` (Unix timestamp)
+1. Compile with Solidity 0.8.34+commit.80d5c536
+2. Deploy with constructor parameter `_unlockTime` (1784029959)
 3. Done!
 
 ## Example
