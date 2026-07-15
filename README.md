@@ -22,6 +22,14 @@ Extends the lock period. The `newUnlockTime` must be greater than the current un
 ### `getBalance()`
 Checks the current ETH balance of the vault.
 
+## Deployment Details
+- **Network**: Sepolia Testnet
+- **Contract Address**: [MASUKKAN ALAMAT KONTRAK ANDA DI SINI]
+- **Etherscan Verification Link**: [MASUKKAN LINK ETHERSCAN DI SINI]
+- **Test Transaction Hashes**: 
+    - Deposit: [MASUKKAN HASH TRANSAKSI DEPOSIT]
+    - Withdraw: [MASUKKAN HASH TRANSAKSI WITHDRAW]
+
 ## Technical Specifications
 - **Solidity Version**: 0.8.24
 - **License**: MIT
